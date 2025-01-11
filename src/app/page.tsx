@@ -1,7 +1,8 @@
 'use client'
 
-import React from "react"
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import image from "../../public/assests/Shopping Sale.png";
 
 const WelcomePage: React.FC = () => {
@@ -10,7 +11,7 @@ const WelcomePage: React.FC = () => {
       {/* Image Section */}
       <div className="mt-12">
         <Image
-          src={image} // Replace with the actual path to your image
+          src={image}
           alt="Welcome Illustration"
           className="w-64 h-auto"
         />
@@ -58,12 +59,12 @@ const WelcomePage: React.FC = () => {
 
       {/* Button Section */}
       <div className="w-full mt-20 px-4">
-        <button className="w-full max-w-md py-3 bg-customPurple text-white font-semibold rounded-full shadow-md hover:bg-purple-600 transition-all">
-          Get started
-        </button>
+        <Link href="/onboarding">
+          <button className="w-full max-w-md py-3 bg-customPurple text-white font-semibold rounded-full shadow-md hover:bg-purple-600 transition-all">
+            Get started
+          </button>
+        </Link>
       </div>
-
-     
     </div>
   );
 };

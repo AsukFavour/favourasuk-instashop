@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Product Management Application
+
+## Overview
+This project is a **Product Management Application** built with **Next.js** (app directory), **TypeScript**, and **Tailwind CSS**. It allows users to create, edit, and preview products with a modern and user-friendly interface. The application supports dynamic routing for navigation and leverages reusable components for efficiency and maintainability.
+
+---
+
+## Features
+- **Create Product**: Add new products with details such as title, description, price, inventory, and variations.
+- **Edit Product**: Modify existing product details dynamically.
+- **Preview Product**: View the product as it would appear to end users.
+- **Responsive Design**: Fully responsive and mobile-friendly interface.
+- **Reusable Components**: Clean and modular architecture for scalability.
+- **Tailwind CSS**: Rapid styling with a utility-first CSS framework.
+
+---
+
+## Technologies Used
+- **Next.js**: Framework for server-rendered React applications.
+- **TypeScript**: Static typing for robust development.
+- **Tailwind CSS**: Utility-first CSS for rapid UI development.
+- **ESLint & Prettier**: Code quality and formatting tools.
+
+---
+
+## Project Structure
+```
+app/
+  products/
+    create/
+      CreateProduct.tsx
+      page.tsx
+    edit/
+      EditProduct.tsx
+      page.tsx
+    preview/
+      PreviewProduct.tsx
+      page.tsx
+components/
+  ProductForm.tsx
+  VariationForm.tsx
+  PreviewCard.tsx
+styles/
+  globals.css
+```
+
+### Key Files
+- **`app/products/create/CreateProduct.tsx`**: Component for creating a new product.
+- **`app/products/edit/EditProduct.tsx`**: Component for editing an existing product.
+- **`app/products/preview/PreviewProduct.tsx`**: Component for previewing a product.
+- **`components/ProductForm.tsx`**: Shared form logic for create and edit pages.
+- **`components/VariationForm.tsx`**: Handles product variations like size and color.
+- **`components/PreviewCard.tsx`**: Displays a product preview card.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- **Node.js**: >= 16.x
+- **npm**: >= 7.x
+- **Git**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/product-management-app.git
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory:
+   ```bash
+   cd product-management-app
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
+### Navigation
+- **Create Product**: Navigate to `/products/create` to add a new product.
+- **Edit Product**: Navigate to `/products/edit?id=PRODUCT_ID` to edit a product. Replace `PRODUCT_ID` with the desired product ID.
+- **Preview Product**: Navigate to `/products/preview?id=PRODUCT_ID` to view a product. Replace `PRODUCT_ID` with the desired product ID.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Adding Routes
+If you want to add custom routes or features, you can update the `page.tsx` files or leverage `useRouter` for programmatic navigation.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
+- **`npm run dev`**: Start the development server.
+- **`npm run build`**: Build the project for production.
+- **`npm run start`**: Start the production server.
+- **`npm run lint`**: Run ESLint to check code quality.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Contribution Guidelines
+1. Fork the repository.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add some feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
+
+
+
+## Contact
+For questions or feedback, reach out at [favourasuk@gmail.com].
+
